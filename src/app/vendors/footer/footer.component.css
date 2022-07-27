@@ -1,0 +1,48 @@
+.copyright-sec {
+    background:rgb(26, 25, 25);
+    
+     height: 200px;
+}
+
+.copy-sec {}
+
+.copy-sec h1 {
+    color: white;
+    margin-top: 87px;
+    margin-left: 60px;
+    font-size: 20px;
+}
+
+.carr {
+    margin-left: 40px;
+    margin-top: 60PX;
+}
+
+.carr nav {
+    margin-top: 20px;
+    margin-left: 50px;
+    text-decoration: none;
+}
+
+.carr nav ul {}
+
+.carr nav li {
+    list-style: none;
+}
+
+.carr nav li a {
+font-size: 17px;
+text-decoration: none;
+}
+
+.foot {
+    float: right;
+}
+
+.foot img {
+    border-radius: 160px;
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+    margin-top: 20px;
+}

@@ -1,0 +1,151 @@
+<!--go to component-->
+<div class="container">
+    
+<h1 mat-dialog-title >Add User details</h1>
+<div mat-dialog-content >
+    
+    <form [formGroup]="studentform">
+
+
+
+        <mat-form-field appearance="outline" class="sizes">
+            <mat-label>id</mat-label>
+            <input formControlName="id" matInput type="text" placeholder="id" readonly>
+            <mat-error *ngIf="studentform.get('id').hasError('required')">Please enter your Name</mat-error>
+
+            <!-- <mat-error *ngIf="studentform.get('name').hasError('maxlength')">Should be less than 10 Charecter</mat-error> -->
+            
+            
+        </mat-form-field>
+       
+        
+        <mat-form-field appearance="outline" class="sizes">
+            <mat-label>name</mat-label>
+            <input formControlName="name" matInput type="text" placeholder="name">
+            <mat-error *ngIf="studentform.get('name').hasError('required')">Please enter your Name</mat-error>
+
+            <mat-error *ngIf="studentform.get('name').hasError('maxlength')">Should be less than 10 Charecter</mat-error>
+            
+            
+        </mat-form-field>
+       
+        
+            <mat-form-field appearance="outline" class="sizes">
+                <mat-label>last_name</mat-label>
+                <input formControlName="last_name" matInput type="text" placeholder="last_name">
+                <mat-error *ngIf="studentform.get('last_name').hasError('required')">Please enter your Id</mat-error>
+
+                <mat-error *ngIf="studentform.get('last_name').hasError('maxlength')">Should be less than 10 Character</mat-error>
+
+    
+        
+            </mat-form-field>
+                    
+            
+        
+                <mat-form-field appearance="outline" class="sizes">
+                    <mat-label>email</mat-label>
+                    <input formControlName="email" matInput type="text" placeholder="email">
+                    <mat-error *ngIf="studentform.get('email').hasError('required')">Please enter your Email-Id</mat-error>
+
+                    <mat-error *ngIf="studentform.get('email').hasError('email')">Should be Email-Id</mat-error>
+                    
+                    </mat-form-field>
+
+
+
+
+
+                    <mat-form-field appearance="outline" class="sizes">
+                        <mat-label>pancard</mat-label>
+                        <input formControlName="pancard" matInput type="text" placeholder="pancard">
+                        <mat-error *ngIf="studentform.get('pancard').hasError('required')">Please enter your PAN</mat-error>
+    
+                        <mat-error *ngIf="studentform.get('pancard').hasError('pancard')">Should be PAN</mat-error>
+                        
+                        </mat-form-field>
+            
+        
+                    <!-- <label for="">Gender</label>
+                    <mat-radio-group formControlName="gender" class="example-radio-group" >
+                         <mat-radio-button class="example-radio-button"  *ngFor="let gender of gender" [value]="gender">
+                               {{gender}}
+                         </mat-radio-button>
+                    </mat-radio-group> -->
+
+
+                    <mat-form-field appearance="outline" class="sizes">
+                        <mat-label>address</mat-label>
+                        <input formControlName="address" matInput type="text" placeholder="address">
+                        <mat-error *ngIf="studentform.get('address').hasError('required')">Please enter your Name</mat-error>
+            
+                        <mat-error *ngIf="studentform.get('address').hasError('maxlength')">Should be less than 10 Characters</mat-error>
+                        
+                        
+                    </mat-form-field>
+                   
+        
+                <!-- <mat-form-field appearance="outline" class="sizes">
+                    <mat-label>city</mat-label>
+                    <mat-select formControlName="city" placeholder="select city">
+                        <mat-option value="option">option</mat-option>
+                        <mat-option value="Hyderabad">Hyderabad</mat-option>
+                        <mat-option value="Pune">Pune</mat-option>
+                        <mat-option value="Banglore">Banglore</mat-option>
+                        <mat-option value="Chennai">Chennai</mat-option>
+                    </mat-select>
+                    </mat-form-field> -->
+                    <!-- <mat-form-field appearance="outline" class="sizes">
+                        <mat-label>dob</mat-label>
+                        <input formControlName="dob" matInput type="text" placeholder="pincode">
+                        <mat-error *ngIf="studentform.get('dob').hasError('required')">Please enter your pincode</mat-error>
+
+                        <mat-error *ngIf="studentform.get('dob').hasError('pattern')">Should 6 numbers</mat-error>
+                        
+                        </mat-form-field> -->
+
+        
+                    
+                    
+        
+                    <mat-form-field appearance="outline" class="sizes">
+                        <mat-label>aadhar</mat-label>
+                        <input formControlName="aadhar" matInput type="text" placeholder="aadhar">
+                        <mat-error *ngIf="studentform.get('aadhar').hasError('required')">Please enter your aadhar</mat-error>
+
+                        <mat-error *ngIf="studentform.get('aadhar').hasError('pattern')">Should 12 numbers</mat-error>
+                        
+                        </mat-form-field>
+
+                        <!-- <mat-form-field appearance="outline" class="sizes">
+                            <mat-label>grade</mat-label>
+                            <input formControlName="class" matInput type="number" placeholder="grade">
+                            <mat-error *ngIf="studentform.get('grade').hasError('required')">Please enter your grade</mat-error>
+    
+                            <mat-error *ngIf="studentform.get('grade').hasError('pattern')">Should 2 numbers</mat-error>
+                            
+                            </mat-form-field> -->
+        
+                        <!-- <mat-form-field appearance="outline" class="sizes">
+                            <mat-label>phone_number</mat-label>
+                            <input formControlName="phone_no" matInput type="number" placeholder="phone_number">
+                            <mat-error *ngIf="studentform.get('phone_number').hasError('required')">Please enter your phone_no</mat-error>
+
+                            <mat-error *ngIf="studentform.get('phone_number').hasError('pattern')">Should 10 numbers</mat-error>
+                            
+                        </mat-form-field> -->
+        
+    </form>
+    
+
+</div>
+
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>close</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="adddetails()"  [disabled]="!studentform.valid">{{ActionBtn}}</button>
+    
+</div>
+</div>
+
+
+
